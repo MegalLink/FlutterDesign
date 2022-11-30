@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        initialRoute: 'basic-design',
+        initialRoute: 'scroll-design',
         routes: {
-          'basic-design': (BuildContext context) => const BasicDesignScreen()
+          'basic-design': (context) => const BasicDesignScreen(),
+          'scroll-design': (context) => const ScrollDesignScreen()
         });
   }
 }
