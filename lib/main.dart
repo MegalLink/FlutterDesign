@@ -1,3 +1,4 @@
+import 'package:design_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,8 +26,9 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const Center(
-          child: Text("Hola mundo "),
-        ));
+        initialRoute: 'basic-design',
+        routes: {
+          'basic-design': (BuildContext context) => const BasicDesignScreen()
+        });
   }
 }
