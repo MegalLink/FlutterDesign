@@ -1,5 +1,6 @@
 import 'package:design_app/screens/screens.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //this change the android, ios colors of battery, hour etc
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+
     return MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
@@ -26,10 +30,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        initialRoute: 'scroll-design',
+        initialRoute: 'home-design',
         routes: {
+          'home-design': (context) => const HomeScreen(),
           'basic-design': (context) => const BasicDesignScreen(),
-          'scroll-design': (context) => const ScrollDesignScreen()
+          'scroll-design': (context) => const ScrollDesignScreen(),
         });
   }
 }
